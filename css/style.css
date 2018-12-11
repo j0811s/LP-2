@@ -48,7 +48,7 @@ border-spacing: 0;
 }
 
 /**********************************/
-/************ 960px ~ *************/
+/************ 961px ~ *************/
 /**********************************/
 /* ヘッダー */
 .header {
@@ -120,15 +120,15 @@ border-spacing: 0;
     transform: translate(-50%,-50%);
 }
 /* メッセージ */
-.message__section {
+.catch {
     width: 100%;
     padding: 5% 0;
 }
-.message__section p {
+.catch p {
     text-align: center;
     line-height: 1.5;
 }
-.message__section span {
+.catch span {
     font-size: 17px;
 }
 /* カルーセル */
@@ -137,14 +137,6 @@ border-spacing: 0;
 }
 .owl-mobile {
     display: none;
-}
-.item {
-    width: 100%;
-}
-.item img{
-    display: block;
-    width: 100%;
-    height: 100%;
 }
 
 /* グリッド */
@@ -221,17 +213,17 @@ border-spacing: 0;
 }
 
 /* メッセージ */
-.message2__section {
+.catch2 {
     position: relative;
     width: 100%;
     padding: 5% 0;
 }
-.message2__section p {
+.catch2 p {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 15px 0;
 }
-.message__section2 span {
+.catch2 span {
     font-size: 17px;
     
 }
@@ -330,9 +322,9 @@ border-spacing: 0;
 
 
 /**********************************/
-/********* 601px ~ 959px **********/
+/********* 600px ~ 960px **********/
 /**********************************/
-@media screen and (min-width:601px) and (max-width:959px) {
+@media screen and (min-width:600px) and (max-width:960px) {
 /* ヘッダー */
 .header {
     display: none;
@@ -379,7 +371,7 @@ border-spacing: 0;
     color: #000;
 }
 /* メッセージ */
-.message__section p {
+.catch p {
     font-size: 14px;
 }
 /* カルーセル */
@@ -437,7 +429,7 @@ border-spacing: 0;
 }
 
 /* メッセージ */
-.message2__section p {
+.catch2 p {
     font-size: 14px;
 }
 .btn__black {
@@ -520,9 +512,9 @@ border-spacing: 0;
 
 
 /**********************************/
-/************ ~ 600px *************/
+/************ ~ 599px *************/
 /**********************************/
-@media screen and (max-width:600px) {
+@media screen and (max-width:599px) {
     /* ヘッダー */
 .header {
     display: none;
@@ -550,7 +542,7 @@ border-spacing: 0;
 }
 .inner__box {
     position: absolute;
-    top: 60%;
+    top: 50%;
     right: 0;
     left: 4%;
 }
@@ -558,7 +550,8 @@ border-spacing: 0;
     text-align: left;
 }
 .inner__box img{
-    width: 30%;
+    width: 160px;
+    min-width: 160px;
 }
 .inner__box p {
     display: flex;
@@ -567,6 +560,7 @@ border-spacing: 0;
     text-align: left;
 }
 .btn {
+    width: 280px;
     margin-left: 0;
     margin-right: auto;
 }
@@ -574,12 +568,12 @@ border-spacing: 0;
     color: #000;
 }
 /* メッセージ */
-.message__section p {
+.catch p {
     font-size: 14px;
     line-height: 2;
-    padding: 0 30%;
+    padding: 0 15%;
 }
-.message__section span {
+.catch span {
     font-size: 15px;
     letter-spacing: 0;
 }
@@ -638,12 +632,12 @@ border-spacing: 0;
 }
 
 /* メッセージ */
-.message2__section p {
+.catch2 p {
     font-size: 14px;
     line-height: 2;
-    padding: 0 30%;
+    padding: 0 15%;
 }
-.message2__section span {
+.catch2 span {
     font-size: 15px;
 }
 .btn__black {
