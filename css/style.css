@@ -50,51 +50,17 @@ border-spacing: 0;
 /**********************************/
 /************ 961px ~ *************/
 /**********************************/
-/* ヘッダー */
-.header {
-    position: fixed;
-    z-index: 10;
-    width: 100%;
-}
-.header img {
+
+/* 共通スタイル */
+img {
     display: block;
     width: 100%;
-    height: 80px;
 }
-.header__mobile {
-    display: none;
-}
-/* ヒーローイメージ */
-.hero__section {
-    position: relative;
-    width: 100%;
-}
-.hero__pc img{
+[class$=__pc] {
     display: block;
-    width: 100%;
-    height: 100vh;
-    padding-top: 80px;
-    object-fit: cover;
 }
-.hero__mobile {
+[class$=__sp] {
     display: none;
-}
-.inner__box {
-    position: absolute;
-    top: 33%;
-    right: 8%;
-}
-.inner__box h1 {
-    text-align: right;
-    margin-bottom: 20px;
-}
-.inner__box p {
-    display: flex;
-    flex-direction: column;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: right;
-    color: #fff;
 }
 .btn {
     position: relative;
@@ -119,7 +85,49 @@ border-spacing: 0;
     right: 5%;
     transform: translate(-50%,-50%);
 }
+/* ヘッダー */
+.header {
+    position: fixed;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+/* ヒーローイメージ */
+.hero__section {
+    position: relative;
+    width: 100%;
+}
+.hero__pc{
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    object-fit: cover;
+}
+.inner__box {
+    position: absolute;
+    top: 33%;
+    right: 8%;
+}
+.inner__box > h1 {
+    margin-bottom: 20px;
+}
+.inner__box > h1 > img {
+    width: 280px;
+    min-width: 280px;
+    margin-left: auto;
+}
+.inner__box > h2 > span {
+    display: block;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: right;
+    color: #fff;
+}
 /* メッセージ */
+.catch__pc {
+    display: block;
+}
 .catch {
     width: 100%;
     padding: 5% 0;
@@ -129,32 +137,26 @@ border-spacing: 0;
     line-height: 1.5;
 }
 .catch span {
-    font-size: 17px;
+    font-size: 110%;
 }
 /* カルーセル */
-.owl-pc {
+.owl__pc {
     display: block;
-}
-.owl-mobile {
-    display: none;
 }
 
 /* グリッド */
-.grid__pc {
+.grid {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     overflow: hidden;
 }
-.grid__pc img{
+.grid__pc{
     transition: transform 2.5s ease;
 }
-.grid__pc img:hover{
+.grid__pc:hover{
     transition: transform 5s ease;
     transform: scale(1.3);
-}
-.grid__mobile {
-    display: none;
 }
 .grid__item {
     overflow: hidden;
@@ -162,16 +164,8 @@ border-spacing: 0;
 .grid__left {
     width: 25%;
 }
-.grid__left img{
-    display: block;
-    width: 100%;
-}
 .grid__center {
     width: 25%;
-}
-.grid__center img{
-    display: block;
-    width: 100%;
 }
 .grid__right {
     width: 50%;
@@ -180,16 +174,8 @@ border-spacing: 0;
     position: relative;
     width: 100%;
 }
-.right__first-row img{
-    display: block;
-    width: 100%;
-}
 .right__second-row {
     display: flex;
-    width: 100%;
-}
-.right__second-row img {
-    display: block;
     width: 100%;
 }
 .grid__cover {
@@ -201,7 +187,7 @@ border-spacing: 0;
     z-index: 1;
     background-color: transparent;
 }
-.grid__cover p{
+.grid__cover > p{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -211,58 +197,28 @@ border-spacing: 0;
     text-align: center;
     color: #fff;
 }
-
 /* メッセージ */
 .catch2 {
     position: relative;
-    width: 100%;
-    padding: 5% 0;
 }
 .catch2 p {
-    text-align: center;
-    line-height: 1.5;
     margin: 0 0 15px 0;
 }
 .catch2 span {
-    font-size: 17px;
-    
+    font-size: 110%;   
 }
 .btn__black {
-    position: relative;
-    display: block;
-    width: 300px;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 3;
-    text-align: center;
-    text-decoration: none;
     margin: 0 auto;
     color: #fff;
     background-color: #000;
 }
-.btn__black:hover {
-    color: #666666;
-}
-.btn__black span{
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(-50%,-50%);
-}
 
 /* ニュースレター */
-.newsletter__pc {
+.newsletter {
     position: relative;
     width: 100%;
 }
-.newsletter__pc img{
-    display: block;
-    width: 100%;
-}
-.newsletter__mobile {
-    display: none;
-}
-.signUp__box {
+.signUp__pc {
     position: absolute;
     top: 50%;
     left: 27%;
@@ -278,74 +234,48 @@ border-spacing: 0;
     transform: translate(-50%,-50%);
     width: 80%;
 }
-.signUp h2{
+.signUp > h2{
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 15px;
 }
 .btn__signUp {
-    position: relative;
-    display: block;
-    width: 300px;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 3;
-    text-align: center;
-    text-decoration: none;
+    margin: 0;
+    margin-right: auto;
     color: #fff;
     background-color: #000;
 }
 .btn__signUp:hover {
     color: #666666;
 }
-.btn__signUp span{
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(-50%,-50%);
-}
-
 /* フッター */
 .footer__pc {
-    display: block;
     width: 100%;
     border-top: 1px solid #616363;
 }
-.footer__pc img {
-    display: block;
-    width: 100%;
-}
-.footer__mobile {
-    display: none;
-}
-
 
 
 /**********************************/
 /********* 600px ~ 960px **********/
 /**********************************/
 @media screen and (min-width:600px) and (max-width:960px) {
+/* 共通スタイル */
+[class$=__pc] {
+    display: none;
+}
+[class$=__sp] {
+    display: block;
+}
 /* ヘッダー */
 .header {
     display: none;
 }
-.header__mobile {
-    display: block;
+.header__sp {
     width: 100%;
     border-bottom: 1px solid #616363;
 }
-.header__mobile img{
-    display: block;
-    width: 100%;
-}
 /* ヒーローイメージ */
-.hero__pc {
-    display: none;
-}
-.hero__mobile {
-    display: block;
-}
-.hero__mobile img{
+.hero__sp {
     width: 100%;
     height: 100vh;
     object-fit: cover;
@@ -356,11 +286,13 @@ border-spacing: 0;
     right: 0;
     left: 8%;
 }
-.inner__box h1 {
-    text-align: left;
+.inner__box > h1 > img{
+    width: 280px;
+    min-width: 280px;
+    margin: 0;
 }
-.inner__box p {
-    font-size: 30px;
+.inner__box > h2 > span{
+    font-size: 200%;
     text-align: left;
 }
 .btn {
@@ -371,25 +303,16 @@ border-spacing: 0;
     color: #000;
 }
 /* メッセージ */
+.catch__pc {
+    display: block;
+}
+.catch__sp {
+    display: none;
+}
 .catch p {
     font-size: 14px;
 }
-/* カルーセル */
-.owl-pc {
-    display: none;
-}
-.owl-mobile {
-    display: block;
-}
 /* グリッド */
-.grid__pc {
-    display: none;
-}
-.grid__mobile {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
 .grid__left {
     width: 50%;
 }
@@ -403,28 +326,11 @@ border-spacing: 0;
     position: relative;
     width: 100%;
 }
-.right__first-row img{
-    display: block;
-    width: 100%;
-}
 .right__second-row {
     display: flex;
     width: 100%;
 }
-.right__second-row img {
-    display: block;
-    width: 100%;
-}
-.grid__cover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: transparent;
-}
-.grid__cover p{
+.grid__cover > p{
     font-size: 14px;
 }
 
@@ -434,24 +340,17 @@ border-spacing: 0;
 }
 .btn__black {
     width: 95%;
+    margin: 0 auto;
 }
 .btn__black:hover {
     color: #fff;
 }
 
 /* ニュースレター */
-.newsletter__pc {
-    display: none;
-}
-.newsletter__mobile {
-    display: block;
+.newsletter__sp {
     width: 100%;
 }
-.newsletter__mobile img{
-    display: block;
-    width: 100%;
-}
-.signUp__box {
+.signUp__sp {
     position: static;
     transform: none;
     width: 100%;
@@ -464,7 +363,7 @@ border-spacing: 0;
     transform: none;
     width: 100%;
 }
-.signUp h2{
+.signUp > h2{
     font-size: 18px;
     text-align: center;
 }
@@ -476,15 +375,7 @@ border-spacing: 0;
     color: #fff;
 }
 /* フッター */
-.footer__pc {
-    display: none;
-}
-.footer__mobile {
-    display: block;
-    width: 100%;
-}
-.footer__mobile img {
-    display: block;
+.footer__sp {
     width: 100%;
 }
 .btn__footer {
@@ -493,17 +384,14 @@ border-spacing: 0;
     width: 100%;
     border-top: 1px solid #EBEBEB;
 }
-.btn__footer a {
+.btn__footer > a {
     display: block;
     width: 100%;
     font-size: 14px;
-    font-weight: bold;
-    text-align: center;
     text-decoration: none;
-    line-height: 3;
     color: #000;
 }
-.btn__footer a:nth-child(2) {
+.btn__footer > a:nth-child(2) {
     background-color: #000;
     color: #fff;
 }
@@ -515,48 +403,41 @@ border-spacing: 0;
 /************ ~ 599px *************/
 /**********************************/
 @media screen and (max-width:599px) {
-    /* ヘッダー */
+/* 共通スタイル */
+[class$=__pc] {
+    display: none;
+}
+[class$=__sp] {
+    display: block;
+}
+/* ヘッダー */
 .header {
     display: none;
 }
-.header__mobile {
-    display: block;
+.header__sp {
     width: 100%;
     border-bottom: 1px solid #616363;
 }
-.header__mobile img{
-    display: block;
-    width: 100%;
-}
 /* ヒーローイメージ */
-.hero__pc {
-    display: none;
-}
-.hero__mobile {
-    display: block;
-}
-.hero__mobile img{
+.hero__sp {
     width: 100%;
     height: 100vh;
     object-fit: cover;
 }
 .inner__box {
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 0;
     left: 4%;
 }
-.inner__box h1 {
-    text-align: left;
-}
-.inner__box img{
+.inner__box > h1 > img{
     width: 160px;
     min-width: 160px;
+    margin: 0;
 }
-.inner__box p {
-    display: flex;
-    flex-direction: row;
-    font-size: 24px;
+.inner__box > h2 > span{
+    display: inline;
+    font-size: 150%;
     text-align: left;
 }
 .btn {
@@ -568,31 +449,22 @@ border-spacing: 0;
     color: #000;
 }
 /* メッセージ */
+.catch {
+    width: 100%;
+}
 .catch p {
+    width: 220px;
+    max-width: 220px;
+    margin: 0 auto;
     font-size: 14px;
-    line-height: 2;
-    padding: 0 15%;
+    line-height: 1.5;
+    text-align: center;
 }
 .catch span {
     font-size: 15px;
     letter-spacing: 0;
 }
-/* カルーセル */
-.owl-pc {
-    display: none;
-}
-.owl-mobile {
-    display: block;
-}
 /* グリッド */
-.grid__pc {
-    display: none;
-}
-.grid__mobile {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
 .grid__left {
     width: 50%;
 }
@@ -606,60 +478,42 @@ border-spacing: 0;
     position: relative;
     width: 100%;
 }
-.right__first-row img{
-    display: block;
-    width: 100%;
-}
 .right__second-row {
     display: flex;
     width: 100%;
 }
-.right__second-row img {
-    display: block;
+.grid__cover > p{
+    font-size: 14px;
+}
+/* メッセージ */
+.catch2 {
     width: 100%;
 }
-.grid__cover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    background-color: transparent;
-}
-.grid__cover p{
-    font-size: 14px;
-}
-
-/* メッセージ */
 .catch2 p {
+    width: 220px;
+    max-width: 220px;
+    margin: 0 auto;
     font-size: 14px;
-    line-height: 2;
-    padding: 0 15%;
+    line-height: 1.5;
+    text-align: center;
 }
 .catch2 span {
     font-size: 15px;
 }
 .btn__black {
     width: 95%;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 .btn__black:hover {
     color: #fff;
 }
 
 /* ニュースレター */
-.newsletter__pc {
-    display: none;
-}
-.newsletter__mobile {
-    display: block;
+.newsletter__sp {
     width: 100%;
 }
-.newsletter__mobile img{
-    display: block;
-    width: 100%;
-}
-.signUp__box {
+.signUp__sp {
     position: static;
     transform: none;
     width: 100%;
@@ -672,7 +526,7 @@ border-spacing: 0;
     transform: none;
     width: 100%;
 }
-.signUp h2{
+.signUp > h2{
     font-size: 18px;
     text-align: center;
 }
@@ -684,15 +538,7 @@ border-spacing: 0;
     color: #fff;
 }
 /* フッター */
-.footer__pc {
-    display: none;
-}
-.footer__mobile {
-    display: block;
-    width: 100%;
-}
-.footer__mobile img {
-    display: block;
+.footer__sp {
     width: 100%;
 }
 .btn__footer {
@@ -701,17 +547,13 @@ border-spacing: 0;
     width: 100%;
     border-top: 1px solid #EBEBEB;
 }
-.btn__footer a {
+.btn__footer > a {
     display: block;
-    width: 100%;
     font-size: 14px;
-    font-weight: bold;
-    text-align: center;
     text-decoration: none;
-    line-height: 3;
     color: #000;
 }
-.btn__footer a:nth-child(2) {
+.btn__footer > a:nth-child(2) {
     background-color: #000;
     color: #fff;
 }

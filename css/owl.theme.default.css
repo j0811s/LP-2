@@ -8,30 +8,29 @@
  */
 .owl-theme .owl-nav {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 40px);
   left: 50%;
   transform: translate(-50%,-50%);
-  width: 65%;
+  width: calc(100% - 220px * 2);
+  height: 0;
   display: flex;
   justify-content: space-between;
+  text-align: center;
   -webkit-tap-highlight-color: transparent; }
   .owl-theme .owl-nav [class*='owl-'] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 40px;
     height: 40px;
-    background: #fff;
-    color: #000;
-    cursor: pointer; }
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    /*border-radius: 3px;*/ }
     /*.owl-theme .owl-nav [class*='owl-']:hover {
-      background: #869791;
-      color: #FFF;
-      text-decoration: none; }
+      background: #fff;
+      color: #848484;
+      text-decoration: none; }*/
   .owl-theme .owl-nav .disabled {
     opacity: 0.5;
-    cursor: default; }*/
-
+    cursor: default; }
 .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 10px; }
 
