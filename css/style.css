@@ -426,9 +426,9 @@ img {
 }
 .inner__box {
     position: absolute;
-    top: 60%;
+    top: 65%;
     right: 0;
-    left: 4%;
+    left: 5%;
 }
 .inner__box > h1 > img{
     width: 160px;
@@ -450,7 +450,7 @@ img {
 }
 /* メッセージ */
 .catch {
-    width: 100%;
+    padding: 10% 0;
 }
 .catch p {
     width: 220px;
@@ -501,7 +501,7 @@ img {
     font-size: 15px;
 }
 .btn__black {
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 20px;
 }
@@ -519,7 +519,7 @@ img {
     width: 100%;
     height: auto;
     background-color: #fff;
-    padding: 5% 0;
+    padding: 10% 0;
 }
 .signUp {
     position: static;
@@ -531,7 +531,7 @@ img {
     text-align: center;
 }
 .btn__signUp {
-    width: 95%;
+    width: 85%;
     margin: 0 auto;
 }
 .btn__signUp:hover {
